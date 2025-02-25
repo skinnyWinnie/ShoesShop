@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --padding-unit: 19%;
+}
+header {
+    background-image: url(/img/background.png);
+    background-repeat: no-repeat;
+    background-color: #484283;
+    background-position:  50% 70%;
+    padding:  0 var(--padding-unit);
+    
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+}
+
+.header-top__logo {
+    padding: 23px 0;
+}
+
+.header-top__list {
+    display: flex;
+}
+.list__item {
+    padding: 23px 0;
+    list-style-type: none;
+}
+.list__item:not(:first-child) {
+    margin-left: 40px;
+}
+
+.list__item a{
+    color: #fff;
+    text-decoration: none;
+    
+}
