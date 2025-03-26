@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Sneakers</title>
 </head>
 <body>
     <header>
         <div class="header-top">
             <div class="header-top__logo">
-                <img src="/img/icons/logo.png" alt="" class="logo__image">
+                <img src="./img/icons/logo.png" alt="" class="logo__image">
             </div>
             <ul class="header-top__list">
                 <li class="list__item item1"><a href="#">Каталог</a></li>
@@ -29,5 +29,123 @@
             <a href="" class="main__btn">Перейти к покупкам</a>
         </div>
     </header>
+    <main>
+        <h2 class="catalog-header">Каталог</h2>
+        <section class="catalog">
+            
+            <div class="params">
+                <h4 class="params-header">
+                    Подбор</br> по параметрам
+                </h4>
+                <p class="price">
+                    Цена, руб
+                </p>
+                <form class="price-wrapper">
+                    <input class="min-price" id="min-value" placeholder="1,850"></input>
+                    <input class="max-price" id="max-value" placeholder="25,678"></input>
+                </form>
+                <div class="slider-container">
+                    <div class="slider-track"></div>
+                    <div class="slider-range"></div>
+                    <div class="slider-thumb left-thumb"></div>
+                    <div class="slider-thumb right-thumb"></div>
+                </div>
+                <!-- <div class="slider-values">
+                    <span id="min-value">1,850</span> — <span id="max-value">25,678</span>
+                </div> -->
+                <div class="sex">
+                    <p class="sex-txt">Пол</p>
+                    <form action="" class="sex-form">
+                        <label class="man custom-checkbox">
+                            <input type="checkbox" name="man" class="input  custom-checkbox" >
+                            <span class="checkmark"></span>
+                            Мужской
+                        </label>
+                        <label class="woman custom-checkbox">
+                            <input type="checkbox" name="woman" class="input  custom-checkbox">
+                            <span class="checkmark"></span>
+                            Женский
+                        </label>
+                    </form>
+                </div>
+                <div class="size-wrapper">
+                    <p class="size">Размер</p>
+                    <div class="size-list">
+                        <button class="size-list__item size-list__item1">35</button>
+                        <button class="size-list__item size-list__item2">36</button>
+                        <button class="size-list__item size-list__item3">37</button>
+                        <button class="size-list__item size-list__item4">38</button>
+                        <button class="size-list__item size-list__item5">39</button>
+                        <button class="size-list__item size-list__item6">40</button>
+                        <button class="size-list__item size-list__item7">41</button>
+                        <button class="size-list__item size-list__item8">42</button>
+                        <button class="size-list__item size-list__item9">43</button>
+                    </div>
+                    <button class="agree-size">Применить</button>
+                    <button class="reset-size">сбросить</button>
+                </div>
+            </div>
+            <div class="product-grid">
+                <div class="product-grid__item product-grid__item1">
+                    <img src="./img/image (1).jpg" alt="" class="card-image">
+                    <div class="img-wrapper">
+                        <img src="./img/icons/Смотреть товар.png" alt="" class="card-icon icon-eye">
+                        <img src="./img/icons/Добавить в корзину.png" alt="" class="card-icon icon-basket">
+                    </div>
+                    <p class="card-descr">Кроссовки Nike Air Force 1 '07 QS</p>
+                    <p class="card-price">11 000 p</p>
+                </div>
+                <div class="product-grid__item product-grid__item1">
+                    <img src="./img/image (1).jpg" alt="" class="card-image">
+                    <div class="img-wrapper">
+                        <img src="./img/icons/Смотреть товар.png" alt="" class="card-icon icon-eye">
+                        <img src="./img/icons/Добавить в корзину.png" alt="" class="card-icon icon-basket">
+                    </div>
+                    <p class="card-descr">Кроссовки Nike Air Force 1 '07 QS</p>
+                    <p class="card-price">11 000 p</p>
+                </div>
+                <div class="product-grid__item product-grid__item1">
+                    <img src="./img/image (1).jpg" alt="" class="card-image">
+                    <div class="img-wrapper">
+                        <img src="./img/icons/Смотреть товар.png" alt="" class="card-icon icon-eye">
+                        <img src="./img/icons/Добавить в корзину.png" alt="" class="card-icon icon-basket">
+                    </div>
+                    <p class="card-descr">Кроссовки Nike Air Force 1 '07 QS</p>
+                    <p class="card-price">11 000 p</p>
+                </div>
+                <div class="product-grid__item product-grid__item1">
+                    <img src="./img/image (1).jpg" alt="" class="card-image">
+                    <div class="img-wrapper">
+                        <img src="./img/icons/Смотреть товар.png" alt="" class="card-icon icon-eye">
+                        <img src="./img/icons/Добавить в корзину.png" alt="" class="card-icon icon-basket">
+                    </div>
+                    <p class="card-descr">Кроссовки Nike Air Force 1 '07 QS</p>
+                    <p class="card-price">11 000 p</p>
+                </div>
+                <div class="product-grid__item product-grid__item1">
+                    <img src="./img/image (1).jpg" alt="" class="card-image">
+                    <div class="img-wrapper">
+                        <img src="./img/icons/Смотреть товар.png" alt="" class="card-icon icon-eye">
+                        <img src="./img/icons/Добавить в корзину.png" alt="" class="card-icon icon-basket">
+                    </div>
+                    <p class="card-descr">Кроссовки Nike Air Force 1 '07 QS</p>
+                    <p class="card-price">11 000 p</p>
+                </div>
+                <div class="product-grid__item product-grid__item1">
+                    <img src="./img/image (1).jpg" alt="" class="card-image">
+                    <div class="img-wrapper">
+                        <img src="./img/icons/Смотреть товар.png" alt="" class="card-icon icon-eye">
+                        <img src="./img/icons/Добавить в корзину.png" alt="" class="card-icon icon-basket">
+                    </div>
+                    <p class="card-descr">Кроссовки Nike Air Force 1 '07 QS</p>
+                    <p class="card-price">11 000 p</p>
+                </div>
+                <button class="show-more">Показать ещё</button>
+            </div>
+            
+            
+        </section>
+    </main>
+    <script src="./main.js"></script>
 </body>
 </html>
