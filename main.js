@@ -132,3 +132,40 @@ document.querySelectorAll('.size-list__item').forEach(btn => {
       }
     });
   });
+
+
+// //   Закрытие - открытие вопроса
+// const closer = document.querySelectorAll('.questions__closer');
+// const p = document.querySelector('.questions__item_hidden');
+// let isRotated = false;
+
+// closer.forEach((item)=> {
+//     item.addEventListener('click', () => {
+//         // Поворот на 45 градусов вперед-назад
+//         isRotated = !isRotated;
+//         item.style.transform = `rotate(${isRotated ? 45 : 0}deg)`;
+        
+//         // Переключение видимости с запоминанием типа элемента
+//         p.style.display = isRotated ? 'block' : 'none';
+//       });
+// })
+
+const closers = document.querySelectorAll('.questions__closer');
+
+closers.forEach((closer) => {
+    // Для каждого элемента находим связанный с ним контент
+    const parentItem = closer.closest('.questions__item'); // Родительский контейнер
+    const hiddenContent = parentItem.querySelector('.questions__item_hidden');
+    
+    closer.addEventListener('click', () => {
+        // 1. Поворот иконки
+        const isRotated = closer.style.transform === 'rotate(45deg)';
+        closer.style.transform = `rotate(${isRotated ? 0 : 45}deg)`;
+        
+        // 2. Переключение видимости контента
+        hiddenContent.style.display = isRotated ? 'none' : 'block';
+        
+        // 3. (Опционально) Переключаем класс для анимации
+        parentItem.classList.toggle('active');
+    });
+});
