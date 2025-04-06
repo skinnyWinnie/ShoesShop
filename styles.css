@@ -432,7 +432,6 @@ label {
     color: #fff;
 }
 .ourTeam__header {
-    
     margin-bottom: 40px;
 }
 .ourTeam__wrapper {
@@ -453,20 +452,25 @@ label {
 
 .questions {
     padding: 60px var(--padding-unit);
-    
 }
+
 .questions__header {
     font-size: 30px;
     color: var(--color-text);
     margin-bottom: 40px;
+    
+}
+.questions__item1 {
+    border-top: 1px solid #000;
 }
 .questions__item {
-    margin: 0 11%;
+    margin: -1px 11% 0 11%;
     padding: 27px 0 0 0;
     color: #242424;
-    border-top: 1px solid #000;
+    
     border-bottom: 1px solid #000;
 }
+
 .questions__item_wrapper {
     display: flex;
     justify-content: space-between;
@@ -493,14 +497,12 @@ label {
     display: flex;
     justify-content: space-between;
 }
-.contacts__info {
-}
+
 .contacts__info_header {
     color: var(--color-text);
     margin-bottom: 60px;
 }
-.contacts__info_main-office {
-}
+
 .main__office_txt,
 .sales_txt {
     color: var(--color-gray);
@@ -627,4 +629,178 @@ label {
 }
 .footer__list_link:not(:last-child) {
     margin-right: 40px;
+}
+
+
+/* Галерея фото */
+.popup__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.thumbnail:hover {
+    border-color: #3498db;
+    transform: scale(1.05);
+}
+
+.thumbnail.active {
+    border-color: #e74c3c;
+}
+
+.popup {
+    
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .45);
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.popup__wrapper {
+    max-width: 1140px;
+    background-color: #fff;
+    padding: 40px;
+}
+
+.popup__content {
+    display: flex;
+    gap: 20px;
+}
+.popup__right {
+    flex: 1;
+    padding-right: 90px;
+}
+.popup__right, 
+.popup__gallery {
+    max-width: 520px;
+}
+.red-star {
+    color: red;
+    width: 20px;
+    height: 20px;
+}
+
+.popup__size {
+    width: 70px;
+    height: 32px;
+}
+
+.popup__descr,
+.popup__specifications {
+    font-size: 24px;
+    color: var(--color-text);
+}
+.popup__txt {
+    color: var(--color-text);
+}
+.popup__article, 
+.popup__quantity {
+    display: inline-block;
+    color: var(--color-gray);
+    margin-right: 47px;
+    margin-bottom: 40px;
+}
+.product__name {
+    color: var(--color-text);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.rating {
+    margin-bottom: 20px;
+}
+.choose__size {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.popup__size {
+    background-color: inherit;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+.popup__prices {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 82px;
+}
+.new__price {
+    color: var(--color-text);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.old__price {
+    font-size: 16px;
+    color: var(--color-gray);
+}
+.popup__order_btn {
+    background-color: #F14F4F;
+    color: #fff;
+    width: 100%;
+    padding: 22px 0;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.popup__pluses {
+    color: var(--color-gray);
+    list-style-type: none;
+    padding-left: 26px;
+    line-height: 1.5em;
+    margin-bottom: 53px;
+}
+.popup__pluses li {
+    position: relative;
+}
+.popup__pluses li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -25px;
+    top: 3px;
+    width: 15px;
+    height: 12px;
+    background-image: url(./img/Vector.svg);
+}
+.popup__specifications {
+    margin-bottom: 20px;
+}
+
+.specifications__list {
+    color: var(--color-text);
+    list-style-type: none;
+    line-height: 1.5em;
 }

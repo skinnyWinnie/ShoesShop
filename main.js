@@ -169,3 +169,46 @@ closers.forEach((closer) => {
         parentItem.classList.toggle('active');
     });
 });
+
+
+// оживляем галерею фото в попапе
+
+document.querySelectorAll('.thumbnail').forEach(thumb => {
+    thumb.addEventListener('click', function() {
+      const mainImage = document.getElementById('current-main');
+      
+      // Просто устанавливаем новую большую картинку
+      mainImage.src = this.src;
+      mainImage.alt = this.alt;
+      
+      // Обновляем класс active
+      document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+
+
+//   Открытие-закрытие попап
+
+let popupOpen = document.querySelectorAll('.icon-eye')
+let popup = document.querySelector('.popup')
+let wrapper = document.querySelector('.popup__wrapper')
+
+popupOpen.forEach((item)=> {
+    item.addEventListener('click', ()=> {
+        popup.style.display = 'flex';
+        document.addEventListener('keydown', handleEscPress)
+    })
+})
+
+function closePopup() {
+    popup.style.display = 'none';
+    document.removeEventListener('keydown', handleEscPress);
+  }
+  function handleEscPress(e) {
+    if(e.key === 'Escape') closePopup();
+  }
+popup.addEventListener('click', (e) => {
+    if(e.target === popup) closePopup();
+  });
